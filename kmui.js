@@ -42,9 +42,9 @@
             }
             __dialog.show();
         },
-        messageBox: function (title, content) {
+        messageBox: function (content) {
             kmui.dialog({
-                title: title,
+                title: "提醒",
                 content: content,
                 buttons: [
                     {
@@ -56,9 +56,9 @@
                 ]
             });
         },
-        confirm: function (title, content, callback) {
+        confirm: function (content, callback) {
             kmui.dialog({
-                title: title,
+                title: "请确认",
                 content: content,
                 buttons: [
                     {
