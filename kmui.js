@@ -2,8 +2,8 @@
     var
     __mask,
     __dialog,
-    __dialog-title,
-    __dialog-content,
+    __dialogTitle,
+    __dialogContent,
 
     kmui = {
         showMask: function () {
