@@ -24,8 +24,34 @@ html,body {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 5px;
-    background-color: yellow;
+    background-color: white;
 }
+.kmui-dialog-title {
+    padding: 5px;
+    font-size: 1.2em;
+}
+.kmui-dialog-content {
+    padding: 8px;
+    color: gray;
+}
+.kmui-dialog-buttons {
+    display: -webkit-flex; /* Safari */
+    display: flexbox;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid gray;
+}
+    .kmui-dialog-buttons a {
+        display: inline-block;
+        text-decoration:none;
+        padding: 8px;
+        flex-grow:1;
+        border-left: 1px solid gray;
+        color: black;
+    }
+        .kmui-dialog-buttons a:first-child {
+            border-left: none;
+        }
 
 .align-right {
     text-align: right;
