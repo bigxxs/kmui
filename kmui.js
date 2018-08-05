@@ -34,14 +34,50 @@
                 var btnDefine = options.buttons[i]
                 var btn = $('<a href="javascript:void(0);"></a>').appendTo(buttons);
                 btn.text(btnDefine.text);
-                btn.click(function () {
-                    btnDefine.click();
-                    __dialog.hide();
-                    kmui.hideMask();
-                });
+                btn.bind('click', btnDefine.click)
+                    .bind('click', function () {
+                        __dialog.hide();
+                        kmui.hideMask();
+                    });
             }
             __dialog.show();
-        }
+        },
+        messageBox: function (title, content) {
+            kmui.dialog({
+                title: title,
+                content: content,
+                buttons: [
+                    {
+                        text: "确定",
+                        click: function () {
+                            return true;
+                        }
+                    }
+                ]
+            });
+        },
+        confirm: function (title, content, callback) {
+            kmui.dialog({
+                title: title,
+                content: content,
+                buttons: [
+                    {
+                        text: "取消",
+                        click: function () {
+                            callback(false);
+                            return true;
+                        }
+                    },
+                    {
+                        text: "确定",
+                        click: function () {
+                            callback(true);
+                            return true;
+                        }
+                    }
+                ]
+            });
+        },
     };
 
     window.kmui = kmui;
