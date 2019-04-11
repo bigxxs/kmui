@@ -106,7 +106,7 @@ button {
     border-radius: 5px;
     background-color: white;
 }
-    .button:last-child{
+    button:last-child{
         margin-right: 0;
     }
 .btn-primary {
