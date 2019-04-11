@@ -83,6 +83,12 @@ html,body {
 .align-right {
     text-align: right;
 }
+.float-right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
 
 .color-gray {
     color: gray;
@@ -94,11 +100,15 @@ html,body {
 }
 
 button {
+    margin-right: 5px;
     padding: 3px 10px;
     border: 1px solid gray;
     border-radius: 5px;
     background-color: white;
 }
+    .button:last-child{
+        margin-right: 0;
+    }
 .btn-primary {
     background-color: #1AAD19;
     color: white;
@@ -226,9 +236,5 @@ a.list-item {
 }
     .form-submit-line button {
         flex-grow: 1;
-        padding: 8px;
-        margin-left: 8px;
-    }
-    .form-submit-line  button:first-child {
-        margin-left: 0;
+        padding: 8px;        
     }
