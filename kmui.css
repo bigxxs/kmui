@@ -3,6 +3,13 @@ html,body {
     padding: 0;
     background-color: #f8f8f8;
 }
+ul {
+    margin: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
 
 .kmui-mask {
     position: fixed;
@@ -79,6 +86,17 @@ html,body {
         .kmui-dialog-buttons a:first-child {
             border-left: none;
         }
+
+.kmui-select-dialog {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #f8f8f8;
+    overflow: auto;
+}
 
 .align-right {
     text-align: right;
@@ -175,6 +193,40 @@ a.list-item {
          text-rendering:auto;
          -webkit-font-smoothing:antialiased;
          -moz-osx-font-smoothing:grayscale;
+    }
+
+.select-box {
+    background-color: white;
+    padding: 0 8px;
+    overflow-y: hidden;
+}
+    .select-box .checked {
+        background-color: #fcfcfc;
+    }
+    .select-box .checked::after {
+        content: "\f046";
+        right: 5px;
+    }
+.select-item {
+    padding: 8px;
+    border-top: 1px solid #f8f8f8;
+    cursor: pointer;
+}
+    .select-item:first-child {
+        border: none;
+    }
+    .select-item::after {
+        content: "\f096";
+        display:inline-block;
+        position: absolute;
+        right: 8px;
+        margin-right: 8px;
+        font:normal normal normal 14px/1 FontAwesome;
+        font-size:1.4em;
+        color: #c9c9c9;
+        text-rendering:auto;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
     }
 
 .card {
