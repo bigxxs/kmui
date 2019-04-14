@@ -119,25 +119,7 @@
                 __selecter.find('.btn-cancel').click(function () {
                     __selecter.hide();
                     $('html,body').removeClass('no-scroll')
-                });
-                //when click OK
-                __selecter.find('.btn-confirm').click(function () {
-                    var result = [];
-                    __selecter.find('li.checked').each(function () {
-                        if (options.valueMember && options.textMember) {
-                            var o = {};
-                            o[options.valueMember] = $(this).attr('data-value');
-                            o[options.textMember] = $(this).text();
-                            result.push(o);
-                        }
-                        else {
-                            result.push($(this).attr('data-value'));
-                        }
-                    });
-                    __selecter.hide();
-                    $('html,body').removeClass('no-scroll')
-                    options.callback(result);//return selected value
-                });
+                });                
             }
             //clear list
             var box = __selecter.find('.select-box');
@@ -166,6 +148,24 @@
                 }
                 $(this).toggleClass('checked');
             });
+            //rebind click event of OK button
+			__selecter.find('.btn-confirm').unbind('click').bind('click', function () {
+				var result = [];
+				__selecter.find('li.checked').each(function () {
+					if (options.valueMember && options.textMember) {
+						var o = {};
+						o[options.valueMember] = $(this).attr('data-value');
+						o[options.textMember] = $(this).text();
+						result.push(o);
+					}
+					else {
+						result.push($(this).attr('data-value'));
+					}
+				});
+				__selecter.hide();
+				$('html,body').removeClass('no-scroll')
+				options.callback(result);//return selected value
+			});          
             //show dialog
             __selecter.show();
         }
