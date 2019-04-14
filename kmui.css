@@ -212,6 +212,13 @@ a.list-item {
     box-sizing: border-box;
     width: 100%;
 }
+.form textarea, .form select {
+    padding: 8px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
 .form-line {
     display: -webkit-flex; /* Safari */
     display: flexbox;
