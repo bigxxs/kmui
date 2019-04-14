@@ -6,6 +6,7 @@
     __dialogTitle,
     __dialogContent,
     __dialogButtons,
+    __selecter,
 
     kmui = {
         showMask: function () {
@@ -98,6 +99,76 @@
                 ]
             });
         },
+        showSelecter: function (options) {
+            $('html,body').addClass('no-scroll')
+            //create elements
+            if (!__selecter) {
+                var html = '<div class="kmui-select-dialog">';
+                    html += '<div class="title-bar">请选择</div>';
+                    html += '<ul class="select-box">';
+                    html += '</ul>';
+                    html += '<div class="form">';
+                        html += '<div class="form-submit-line">';
+                            html += '<button class="btn-confirm btn-primary">确定</button>';
+                            html += '<button class="btn-cancel">取消</button>';
+                        html += '</div>';
+                    html += '</div>';
+                html += '</div>';
+                __selecter = $(html).appendTo(window.document.body);
+                //when click CANCEL
+                __selecter.find('.btn-cancel').click(function () {
+                    __selecter.hide();
+                    $('html,body').removeClass('no-scroll')
+                });
+                //when click OK
+                __selecter.find('.btn-confirm').click(function () {
+                    var result = [];
+                    __selecter.find('li.checked').each(function () {
+                        if (options.valueMember && options.textMember) {
+                            var o = {};
+                            o[options.valueMember] = $(this).attr('data-value');
+                            o[options.textMember] = $(this).text();
+                            result.push(o);
+                        }
+                        else {
+                            result.push($(this).attr('data-value'));
+                        }
+                    });
+                    __selecter.hide();
+                    $('html,body').removeClass('no-scroll')
+                    options.callback(result);//return selected value
+                });
+            }
+            //clear list
+            var box = __selecter.find('.select-box');
+            box.html('');
+            //insert items
+            for (var i = 0; i < options.data.length; i++) {
+                var dataItem = options.data[i];
+                var item, itemValue;
+                if (options.valueMember && options.textMember) {
+                    itemValue = dataItem[options.valueMember];
+                    item = $('<li class="select-item" data-value="' + dataItem[options.valueMember] + '">' + dataItem[options.textMember] + '</li>').appendTo(box);
+                }
+                else {
+                    itemValue = dataItem;
+                    item = $('<li class="select-item" data-value="' + dataItem + '">' + dataItem + '</li>').appendTo(box);
+                }
+                //default checked if exist options.selected
+                if (options.selected && options.selected.indexOf(itemValue) >= 0) {
+                    item.addClass('checked');
+                }
+            }
+            //bind click event of items
+            __selecter.find('.select-item').click(function () {
+                if (!options.multiple) {
+                    __selecter.find('.select-item').removeClass('checked');
+                }
+                $(this).toggleClass('checked');
+            });
+            //show dialog
+            __selecter.show();
+        }
     };
 
     window.kmui = kmui;
