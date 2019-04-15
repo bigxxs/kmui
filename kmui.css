@@ -168,6 +168,9 @@ button {
     background-color: white;
     padding: 0 8px;
 }
+    .form .list-box {
+        padding: 0;
+    }
 .list-item {
     display: block;
     width: auto;
@@ -193,6 +196,9 @@ a.list-item {
          text-rendering:auto;
          -webkit-font-smoothing:antialiased;
          -moz-osx-font-smoothing:grayscale;
+    }
+    .form a.list-item::after {
+        margin-right: 16px;
     }
 
 .select-box {
