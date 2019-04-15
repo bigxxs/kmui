@@ -71,7 +71,7 @@
                     {
                         text: "确定",
                         click: function () {
-			    if(callbakc){
+			    if(callback){
 				    callback();
 			    }
                             return true;
