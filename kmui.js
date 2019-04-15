@@ -129,11 +129,11 @@
                 var dataItem = options.data[i];
                 var item, itemValue;
                 if (options.valueMember && options.textMember) {
-                    itemValue = dataItem[options.valueMember];
-                    item = $('<li class="select-item" data-value="' + dataItem[options.valueMember] + '">' + dataItem[options.textMember] + '</li>').appendTo(box);
+                    itemValue = dataItem[options.valueMember] + '';//change to string type
+                    item = $('<li class="select-item" data-value="' + itemValue + '">' + dataItem[options.textMember] + '</li>').appendTo(box);
                 }
                 else {
-                    itemValue = dataItem;
+                    itemValue = dataItem + '';//change to string type
                     item = $('<li class="select-item" data-value="' + dataItem + '">' + dataItem + '</li>').appendTo(box);
                 }
                 //default checked if exist options.selected
