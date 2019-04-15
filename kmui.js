@@ -63,7 +63,7 @@
             }
             __dialog.show();
         },
-        messageBox: function (content) {
+        messageBox: function (content, callback) {
             kmui.dialog({
                 title: "提醒",
                 content: content,
@@ -71,6 +71,9 @@
                     {
                         text: "确定",
                         click: function () {
+			    if(callbakc){
+				    callback();
+			    }
                             return true;
                         }
                     }
