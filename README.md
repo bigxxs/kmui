@@ -109,6 +109,21 @@ Here is [examples](https://bigxxs.github.io/kmui/)
   </div>
 ```
 
+### Loading
+
+```
+<script>
+  //show a simple loading
+  kmui.showLoading()
+  
+  //show loading with title
+  kmui.showLoading('custom title')
+  
+  //hide loading
+  kmui.hideLoading()
+</script>
+```
+
 ### Message box
 
 ```
