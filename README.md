@@ -1,4 +1,4 @@
-<img src="https://bigxxs.github.io/kmui/logo.png"/>
+<img src="https://bigxxs.github.io/kmui/logo.png?ver=2"/>
 
 # kmui
 
