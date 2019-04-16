@@ -85,10 +85,19 @@ Here is [examples](https://bigxxs.github.io/kmui/)
   <div class="form">
     <label>User name</label>
     <input type="text"/>
+    
     <label>Password</label>
     <input type="password"/>
+    
     <label>This is a textarea</label>
     <textarea rows="3"></textarea>
+    
+    <label>Mobile verification code</label>
+    <div class="form-line">
+      <input type="text" class="form-line-bd" />
+      <button class="form-line-ft">Send</button>
+    </div>
+    
     <div class="form-submit-line">
       <button class="btn-primary">Login</button>
       <button>Cancel</button>
