@@ -207,7 +207,7 @@ a.list-item {
     overflow-y: hidden;
 }
     .select-box .checked {
-        background-color: #fcfcfc;
+        
     }
     .select-box .checked::after {
         content: "\f046";
