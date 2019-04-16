@@ -90,14 +90,27 @@ Here is [examples](https://bigxxs.github.io/kmui/)
     <label>Password</label>
     <input type="password"/>
     
-    <label>This is a textarea</label>
-    <textarea rows="3"></textarea>
-    
     <label>Mobile verification code</label>
     <div class="form-line">
       <input type="text" class="form-line-bd" />
       <button class="form-line-ft">Send</button>
     </div>
+    
+    <label>This is a textarea</label>
+    <textarea rows="3"></textarea>
+    
+    <label>This is a select</label>
+    <select>
+      <option>Tom</option>
+      <option>Smith</option>
+      <option>Peter</option>
+    </select>
+    
+    <label>This is a checkbox list</label>
+    <div class="select-box">
+      <div class="select-item">Uncheked</div>
+      <div class="select-item checked">Checked</div>
+    </div> 
     
     <div class="form-submit-line">
       <button class="btn-primary">Login</button>
