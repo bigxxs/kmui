@@ -65,8 +65,62 @@
   </div>
 
   <h2>Message box</h2>
-  <div><button click="kmui.messageBox('Hello world!')">Show message</button></div>
-  <div><button click="kmui.messageBox('Hello world!', function(){alert('You pressed OK')})">Show message with callback</button></div>
+  <div class="form">
+    <div class="form-submit-line">
+      <button onclick="kmui.messageBox('Hello world!')">Show message</button>
+      <button onclick="kmui.messageBox('Hello world!', function(){alert('You pressed OK')})">Show message with callback</button>
+    </div>
+  </div>
+  
+  <h2>Confirm</h2>
+  <div class="form">
+    <div class="form-submit-line">
+      <button onclick="testConfirm">Click to test</button>
+    </div>
+  </div>  
+  <script>
+    function testConfirm(){
+      kmui.confirm('Do you really want to remove this?', function (isConfirm) {
+        if(isConfirm){
+          alert('You pressed YES')
+        }
+        else{
+          alert('You pressed NO')
+        }
+      })     
+     }
+  </script>   
+
+  <h2>Common dialog</h2>
+  <div class="form">
+    <div class="form-submit-line">
+      <button onclick="testDialog">Click to test</button>
+    </div>
+  </div>  
+  <script>
+    function testDialog(){
+      kmui.dialog({
+        title: "Title of dialog",
+        content: "some content ......",
+        buttons: [
+          {
+            text: "Button ONE",
+            click: function () {
+              alert('You clicked button ONE')
+              return true; //return true can close dialog
+            }
+          },
+          {
+            text: "Button TWO",
+              click: function () {
+              alert('You clicked button TWO')
+              return true; //return true can close dialog
+            }
+          }
+        ]
+      })     
+     }
+  </script>   
     
 </body>
 </html>
