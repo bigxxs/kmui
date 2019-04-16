@@ -145,11 +145,11 @@ Here is [examples](https://bigxxs.github.io/kmui/)
 ```
 <script>
   kmui.dialog({
-    title: "Title of dialog",
-    content: "some content ......",
+    title: 'Title of dialog',
+    content: 'some content ......',
     buttons: [
         {
-            text: "Button ONE",
+            text: 'Button ONE',
             click: function () {
                 //do some thing ...
                 
@@ -157,7 +157,7 @@ Here is [examples](https://bigxxs.github.io/kmui/)
             }
         },
         {
-            text: "Button TWO",
+            text: 'Button TWO',
             click: function () {
                 //do some thing ...
                 
