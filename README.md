@@ -27,13 +27,13 @@ A front ui framework for WeChat H5 pages.
 
 ## Quick start
 
-### title bar
+### Title bar
 
 ```
   <div class="title-bar">This is a title</div>
 ```
 
-### search bar
+### Search bar
 
 ```
   <div class="search-bar">
@@ -42,7 +42,7 @@ A front ui framework for WeChat H5 pages.
   </div>
 ```
 
-### list
+### List
 
 ```
   <div class="list-box">
@@ -52,7 +52,7 @@ A front ui framework for WeChat H5 pages.
   </div>
 ```
 
-### list of link
+### List of link
 
 ```
   <div class="list-box">
@@ -62,7 +62,7 @@ A front ui framework for WeChat H5 pages.
   </div>
 ```
 
-### card
+### Card
 
 ```
   <div class="card">
@@ -70,6 +70,7 @@ A front ui framework for WeChat H5 pages.
     <div class="card-bd">some content ......</div>
     <div class="card-ft">footer</div>
   </div>
+  
   <div class="card">
     <div class="card-hd">Card two</div>
     <div class="card-bd">some content ......</div>
@@ -77,7 +78,7 @@ A front ui framework for WeChat H5 pages.
   </div>  
 ```
 
-### form
+### Form
 
 ```
   <div class="form">
@@ -97,7 +98,7 @@ A front ui framework for WeChat H5 pages.
   </div>
 ```
 
-### message box
+### Message box
 
 ```
 <script>
@@ -114,7 +115,7 @@ A front ui framework for WeChat H5 pages.
 </script>
 ```
 
-### confirm
+### Confirm
 
 ```
 <script>
@@ -129,7 +130,7 @@ A front ui framework for WeChat H5 pages.
 </script>
 ```
 
-### common dialog
+### Common dialog
 
 ```
 <script>
@@ -158,7 +159,7 @@ A front ui framework for WeChat H5 pages.
 </script>
 ```
 
-### selecter
+### Selecter
 
 ```
 <script>
@@ -192,7 +193,7 @@ A front ui framework for WeChat H5 pages.
 </script>
 ```
 
-### others
+### Others
 
 ```
   <div>
