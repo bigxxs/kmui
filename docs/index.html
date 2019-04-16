@@ -75,7 +75,7 @@
   <h2>Confirm</h2>
   <div class="form">
     <div class="form-submit-line">
-      <button onclick="testConfirm">Click to test</button>
+      <button onclick="testConfirm()">Click to test</button>
     </div>
   </div>  
   <script>
@@ -94,7 +94,7 @@
   <h2>Common dialog</h2>
   <div class="form">
     <div class="form-submit-line">
-      <button onclick="testDialog">Click to test</button>
+      <button onclick="testDialog()">Click to test</button>
     </div>
   </div>  
   <script>
@@ -121,6 +121,25 @@
       })     
      }
   </script>   
+
+  <h2>Selecter</h2>
+  <div class="form">
+    <div class="form-submit-line">
+      <button onclick="testSelecter()">Click to test</button>
+    </div>
+  </div>  
+  <script>
+    function testSelecter(){
+      kmui.showSelecter({
+        multiple: false, //single select
+        data: ['RED', 'GREEN', 'BLUE', 'YELLOW'],
+        selected: ['BLUE'], //default checked element, can be an empty array []
+        callback: function (res) {
+            alert('You select ' + res[0])
+        }
+      })     
+     }
+  </script>  
     
 </body>
 </html>
