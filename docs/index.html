@@ -125,11 +125,12 @@
   <h2>Selecter</h2>
   <div class="form">
     <div class="form-submit-line">
-      <button onclick="testSelecter()">Click to test</button>
+      <button onclick="testSingleSelecter()">Single selecter</button>
+      <button onclick="testMultipleSelecter()">Multiple selecter</button>
     </div>
-  </div>  
+  </div>
   <script>
-    function testSelecter(){
+    function testSingleSelecter(){
       kmui.showSelecter({
         multiple: false, //single select
         data: ['RED', 'GREEN', 'BLUE', 'YELLOW'],
@@ -138,7 +139,25 @@
             alert('You select ' + res[0])
         }
       })     
-     }
+    }
+    
+    function testMultipleSelecter(){
+      kmui.showSelecter({
+        multiple: true, //multiple select
+        valueMember: 'id', //value field name of data member
+        textMember: 'name', //text field name of data member
+        data: [
+          { id: '1', name: 'Bird'},
+          { id: '2', name: 'Cat'},
+          { id: '3', name: 'Dog'},
+          { id: '4', name: 'Lion'},
+        ],
+        selected: [],
+        callback: function (res) {
+          alert(JSON.stringify(res))
+        }
+      })      
+    }
   </script>  
     
 </body>
