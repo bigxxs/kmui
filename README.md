@@ -68,13 +68,13 @@ Here is [examples](https://bigxxs.github.io/kmui/)
 
 ```
   <div class="card">
-    <div class="card-hd">Card one</div>
+    <div class="card-hd">Card one title</div>
     <div class="card-bd">some content ......</div>
     <div class="card-ft">footer</div>
   </div>
   
   <div class="card">
-    <div class="card-hd">Card two</div>
+    <div class="card-hd">Card two title</div>
     <div class="card-bd">some content ......</div>
     <div class="card-ft align-right">footer at right</div>
   </div>  
