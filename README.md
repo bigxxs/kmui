@@ -238,11 +238,11 @@ Here is [example](https://bigxxs.github.io/kmui/)
   <div>
     <span>A</span>
     <span class="float-right">B</span>
-  <div>
+  </div>
 ```
 
 ```
   <div class="padding-container">
     give me five
-  <div>
+  </div>
 ```
