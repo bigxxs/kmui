@@ -1,5 +1,5 @@
 
-A front ui framework for WeChat H5 pages.
+A front UI framework for WeChat H5 pages.
 Here is [example](https://bigxxs.github.io/kmui/)
 
 ## Starter template
