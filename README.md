@@ -1,4 +1,3 @@
-<img src="https://bigxxs.github.io/kmui/logo.png?ver=3" width="20%" height="20%" />
 
 A front ui framework for WeChat H5 pages.
 Here is [example](https://bigxxs.github.io/kmui/)
