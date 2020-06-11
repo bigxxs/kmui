@@ -200,6 +200,9 @@ a.list-item {
     .form a.list-item::after {
         margin-right: 16px;
     }
+    a.list-item.level-up::after {
+        content: "\f102";
+    }
 
 .select-box {
     background-color: white;
