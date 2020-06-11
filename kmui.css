@@ -300,6 +300,7 @@ a.list-item {
     flex-direction: row;
 }
     .form-submit-line button {
+        width: 50px;
         flex-grow: 1;
         padding: 8px;        
     }
